@@ -1,191 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abu Sufian - Curriculum Vitae</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #007bff;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 2em;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-        }
-        h3 {
-            font-size: 1.4em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .personal-data, .research-interest, .education, .teaching-experiences, .awards, .languages, .future-goals {
-            margin-bottom: 20px;
-        }
-        .education-item, .experience-item {
-            margin-bottom: 15px;
-        }
-        .institution {
-            font-weight: bold;
-        }
-        .location {
-            font-style: italic;
-            color: #777;
-        }
-        .date {
-            color: #555;
-        }
-        .mentor {
-            font-style: italic;
-        }
-        .project-title {
-            font-style: italic;
-        }
-    </style>
+    <title>Abu Sufian</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <header>
-            <h1>Abu Sufian</h1>
-            <p>Postdoctoral Fellow</p>
-            <p><a href="mailto:asufian@udec.cl">asufian@udec.cl</a> | +46-995027402</p>
-        </header>
+        <div id="header"></div>
+        <script>
+            fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        </script>
 
-        <section class="personal-data">
-            <h2>Personal Data</h2>
-            <p><strong>Date of Birth:</strong> 5th February 1995</p>
-            <p><strong>Nationality:</strong> Indian</p>
-            <p><strong>Additional Email:</strong> <a href="mailto:abusufian255@gmail.com">abusufian255@gmail.com</a></p>
+        <section class="section">
+            <h2>About Me</h2>
+            <p>I am a Postdoctoral Fellow at the University of Concepción with a strong background in mathematics. My research interests include Analysis of PDEs, Homogenization of PDEs, Optimal Control Problems, and Multiscale Analysis.</p>
         </section>
 
-        <section class="research-interest">
-            <h2>Research Interest</h2>
-            <p>Analysis of PDEs, Homogenization of PDEs, Optimal control problem, Multiscale analysis</p>
-        </section>
-
-        <section class="education">
-            <h2>Education</h2>
+        <section class="section">
+            <h2>Education</h2>  
             <div class="education-item">
-                <h3>Post Doctoral Fellow</h3>
-                <p class="institution">University of Concepción, Dmat</p>
-                <p class="location">Concepción, Chile</p>
-                <p class="date">2024 (Oct) - Present</p>
-                <p class="mentor">Mentor: Prof. Ravi Prakash</p>
+                <strong>Ph.D.</strong>
+                <p>Department of Mathematics, Indian Institute of Science, India (2017-2022)</p>
             </div>
             <div class="education-item">
-                <h3>Post Doctoral Fellow</h3>
-                <p class="institution">Fraunhofer ITWM</p>
-                <p class="location">Kaiserslautern, Germany</p>
-                <p class="date">2024 (Jan) - Sept</p>
-                <p class="mentor">Mentor: Prof. Julia Orlik</p>
+                <strong>Master of Science</strong>
+                <p>Department of Mathematics, Indian Institute of Science, India (2015-2017)</p>
             </div>
             <div class="education-item">
-                <h3>Post Doctoral Fellow</h3>
-                <p class="institution">TIFR Center For Applicable Mathematics</p>
-                <p class="location">Bangalore, Karnataka, India</p>
-                <p class="date">2022 (Dec) - 2023</p>
-                <p class="mentor">Mentor: Prof. Debayan Maity</p>
-            </div>
-            <div class="education-item">
-                <h3>Integrated Ph.D.</h3>
-                <p class="institution">Department of Mathematics, Indian Institute of Science</p>
-                <p class="location">Bangalore, Karnataka, India</p>
-                <p class="date">2017 - 2022</p>
-                <p>Advisor: Prof. A. K. Nandakumaran</p>
-            </div>
-            <div class="education-item">
-                <h3>Master of Science (as a part of Int. Ph.D. program)</h3>
-                <p class="institution">Department of Mathematics, Indian Institute of Science</p>
-                <p class="location">Bangalore, India</p>
-                <p class="date">2015 - 2017</p>
-                <p>CGPA: $6.9/8$</p>
-                <p class="project-title">MS project: Application of Two-scale Convergence in Homogenization of Elliptic PDEs and Monotone Operators</p>
-                <p>Supervisor: Prof. A. K. Nandakumara</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor of Science</h3>
-                <p class="institution">Motilal Nehru College, University of Delhi</p>
-                <p class="location">Delhi, India</p>
-                <p class="date">2012 - 2015</p>
-                <p>Major: Mathematics, Minors: Physics & Chemistry</p>
-                <p>Percentage in Maths: 95, Overall percentage: 91.6</p>
-            </div>
-            <div class="education-item">
-                <h3>Higher Secondary Examination</h3>
-                <p class="institution">C. R. G. B. C. Institution</p>
-                <p class="location">Howrah, West Bengal, India</p>
-                <p class="date">2012</p>
-                </div>
-        </section>
-
-        <section class="teaching-experiences">
-            <h2>Teaching Experiences</h2>
-            <div class="experience-item">
-                <p class="date">Aug.-Dec., 2022</p>
-                <p>Teaching Assistant (TIFR-CAM, Bangalore), MTH-108.4 (Numerical Analysis)</p>
-            </div>
-            <div class="experience-item">
-                <p class="date">Jan.-Apr., 2022</p>
-                <p>Teaching Assistant (TIFR-CAM, Bangalore), MTH-103.4 (Theory of Ordinary Differential Equations)</p>
-            </div>
-            <div class="experience-item">
-                <p class="date">Aug.-Dec., 2020</p>
-                <p>Teaching Assistant (Department of Mathematics, IISc, Bangalore) for MA 200 (Multivariable Calculus)</p>
-            </div>
-            <div class="experience-item">
-                <p class="date">Jan.-Apr., 2019</p>
-                <p>Teaching Assistant (Department of Mathematics, IISc, Bangalore), MA 241 (Ordinary Differential Equations)</p>
-            </div>
-            <div class="experience-item">
-                <p class="date">Aug.-Dec., 2018</p>
-                <p>Teaching Assistant (Department of Mathematics, IISc, Bangalore), MA 242 (Partial Differential Equation)</p>
-            </div>
-            <div class="experience-item">
-                <p class="date">Aug.-Dec., 2017</p>
-                <p>Teaching Assistant (Department of Mathematics, IISc, Bangalore), UM 101: Analysis and Linear algebra II</p>
+                <strong>Bachelor of Science</strong>
+                <p>Motilal Nehru College, University of Delhi, India (2012-2015)</p>
             </div>
         </section>
 
-        <section class="awards">
+        <section class="section">
             <h2>Awards and Achievements</h2>
             <ul>
-                <li>2024 NPDF-research grant (Not Availed)</li>
-                <li>2017 Qualified test for Junior Research Fellowship (JRF) in Mathematics.</li>
-                <li>2015 All India Rank 29 in IIT-JAM examination</li>
-                <li>2015 J. L. Jogi Math Scholarship for being over all topper in B.Sc Mathematics(H).</li>
-                <li>2012-15 Recipient of INSPIRE scholarships, funded by DST, Govt. of India, during Bachelors.</li>
+                <li>CSIR - JRF in Mathematics (2017)</li>
+                <li>All India Rank 29 in IIT-JAM examination (2015)</li>
+                <li>J. L. Jogi Math Scholarship (2015)</li>
+                <li>INSPIRE scholarships (2012-2015)</li>
             </ul>
         </section>
 
-        <section class="languages">
-            <h2>Languages</h2>
-            <p>Bengali (Native) - English - Hindi</p>
-        </section>
-
-        <section class="future-goals">
-            <h2>Future Goals</h2>
-            <p>Pursue higher studies in mathematics and work in the education and research sector.</p>
-        </section>
+        <footer>
+            <p>&copy; 2025 Abu Sufian</p>
+        </footer>
     </div>
 </body>
+
 </html>
